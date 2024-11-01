@@ -530,4 +530,205 @@ ion-popover.display-name {
         font-size: 30px;
     }
 }
+.spinner-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.065);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.page-spinner-background {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.065);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+
+
+.available{
+    background-color: var(--ion-color-success);
+}
+.busy{
+    background-color: var(--ion-color-danger);
+}
+
+
+ion-card {
+    .div-horizental{
+        width: 6px;
+        // position: absolute;
+        height: 100%;
+        z-index: 10;
+    
+    }
+    &:first-child {
+      margin: 10px 10px 20px;
+    }
+    margin: 20px 10px;
+
+    .wrapper {
+        width: 100%;
+        margin-left: 10px;
+    }
+    ion-item::part(native)  {
+        --inner-padding-end : 5px;
+        --padding-start:0;
+    }
+    ion-card-header{
+        padding: 0 0 0 0;
+        ion-card-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding-inline-start: 10px;
+            justify-content: center;
+
+            ion-avatar {
+                margin: 0 auto;
+
+                img {
+                    background-size: cover;
+                    border-radius: 15px;
+                    height: 45px;
+                    width: 45px;
+                }
+            }
+            .resource-type-icon {
+                font-size: 40px;
+            }
+            ion-label {
+                font-size: 20px;
+                flex-grow: 3;
+                margin-bottom: 5px;
+                .displayName, .emailAddress {
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 1;     
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+                .emailAddress {
+                    color: #6e6e6e;
+                    font-size: 12px;
+                    margin: 2px;
+                    font-weight: 500;
+                    word-break: break-word;
+                }
+            }
+       
+        }
+        ion-card-subtitle {
+            display: flex;
+            font-size: 11px;
+            align-items: center;
+            .address {
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;     
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            .location-icon {
+                margin-right: 2.5px;
+            }
+            .favorite-icon {
+                margin-left:  auto;
+                font-size: 24px;
+                cursor: pointer;
+                transform: translateY(5px);
+            }
+        }
+    }
+    ion-card-content {
+        padding: 5px 0 8px 0;
+        ion-chip {
+            padding-inline:10px;
+            font-size: 12px;
+            ion-icon{
+                margin-right: 3.5px;
+            }
+            &.dumb {
+                pointer-events: none;
+            }
+            .book-options-icon {
+                font-size: 12px;
+                margin-left: 5px;
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+ion-popover.booking-options {
+    ion-item {
+        font-size: 14px;
+        ion-icon {
+            margin-right: 10px;
+        }
+    }
+}
+
+ion-popover.display-name {
+    --width: 275px;
+    ion-icon {
+        font-size: 16px;
+    }
+    ion-label {
+        margin: 5px 10px;
+        .displayName, .address , .emailAddress {
+            display: flex;
+            align-items: center;
+            gap:5px;
+            margin: 7px 0;
+            word-break: break-word;
+            div {
+                display: flex;
+            }
+        }
+        .address {
+            font-size: 12px !important;
+            // margin-left: -2px;
+
+            ion-icon {
+                font-size: 16px;
+            }
+        }
+        .displayName {
+           font-size: 15px;
+
+        }
+        .emailAddress {
+            ion-icon {
+                color: #6e6e6e;
+            }
+            small {
+                color: #6e6e6e;
+                font-size: 12px;
+                font-weight: 500;
+            }
+        }
+   
+    }
+}
+
+
+
+
 
