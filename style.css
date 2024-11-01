@@ -1,1 +1,201 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+ion-popover.search-popover {
+    --background: #1b171b;
+    --width: 100vw;
+    --offset-y: 5px; 
+}
+
+ion-popover.search-popover::part(content) {
+    border-radius: 0px;
+    left: calc(0px + var(--offset-x, 0px)) !important;
+}
+ion-popover.search-popover::part(backdrop) {
+    height: calc(100% - 50px);
+    margin-top: auto;
+}
+
+.header-ios.app-header ion-toolbar:last-of-type  {
+    --border-width: 0px 0 3px;
+}
+
+.color-red-asterisk{
+    color: var(--ion-color-danger);
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.text-size h2 {
+    font-size: 16px !important;
+}
+
+ion-toast.custom-toast-button::part(button) {
+    background-color: var(--ion-color-dark-shade);
+    margin: 0 auto 10px ;
+    font-size: 12px;
+    border-radius: 10px;
+    height: unset;
+  }
+
+.action-sheet-button-disabled{
+    pointer-events: none !important;
+    cursor: not-allowed !important;
+    opacity: 0.6;
+}  
+
+
+
+ion-header{
+    ion-title.ios {
+        font-size: 25px;
+    }
+}
+
+ion-popover [popover]:not(:popover-open):not(dialog[open]){
+    display: contents;
+  }
+
+  .custom-accordion>[slot="header"] .ion-accordion-toggle-icon,
+  .custom-accordion>[slot="header"] .ion-accordion-toggle-icon {
+      color: #c8c7cc;
+      font-size: 20px;
+      transform: translateX(6px);
+  }
+
+  ion-accordion.accordion-expanding>[slot="header"] .ion-accordion-toggle-icon,
+  ion-accordion.accordion-expanded>[slot="header"] .ion-accordion-toggle-icon {
+      transform: rotate(90deg) translateY(-6px);
+  }
+
+ion-alert.custom-alert,ion-alert.map-interaction-alert {
+    white-space: break-spaces;
+}
+
+ion-toast.sync-toaster,ion-toast.sync-toaster-success,ion-toast.sync-toaster-error{
+    width: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+ion-toast.sync-toaster{
+    width: 250px !important;
+}
+ion-toast.sync-toaster::part(icon) {
+    font-size: 24px;
+    margin-inline-start: 27.75%;
+ 
+  }
+ion-toast.sync-toaster-success{
+    width: 250px !important;
+}
+ion-toast.sync-toaster-success::part(message) {
+    color: green;
+}
+
+ion-toast.sync-toaster-success::part(icon) {
+    font-size: 24px; 
+    color: green;
+    margin-inline-start: 18%;
+  }
+ion-toast.sync-toaster-error{
+    width: 400px !important;
+}
+
+
+ion-toast.sync-toaster-error::part(icon) {
+    font-size: 24px; 
+    color: red;
+    margin-inline-start: 14%;
+  }
+
+swiper-container.swiper-calendar-container {
+    width: 100%;
+    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.2);
+    &::part(container) {
+        padding-bottom: 12.5px;
+    }
+    swiper-slide {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: calc(100% / 7);
+    }
+   
+}
+
+  swiper-container.swiper-container {
+    --swiper-pagination-bottom: 20px;
+    --swiper-pagination-color: var(--ion-color-primary, #0054e9);
+    --swiper-pagination-progressbar-bg-color: rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.25);
+    --swiper-scrollbar-bg-color: rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.1);
+    --swiper-scrollbar-drag-bg-color: rgba(var(--ion-text-color-rgb, 0, 0, 0), 0.5);
+    width: 100%;
+    height: 100%;
+    padding: 20px 10px 0 10px;
+  
+  swiper-slide {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-shrink: 0;
+    align-items: center;
+    overflow-y: scroll;
+    width: 100%;
+    height: 95%;
+    font-size: 18px;
+  
+    text-align: center;
+    box-sizing: border-box;
+  }
+  
+  swiper-slide div div img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 400px;
+  }
+  
+}
+
+  ion-modal.onboarding {
+    --height:100%;
+    --width : 100%;
+}
+  
+.warning-toast::part(icon) {
+    color: var(--ion-color-danger)
+}
+
+
 
