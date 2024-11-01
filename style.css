@@ -196,6 +196,72 @@ swiper-container.swiper-calendar-container {
 .warning-toast::part(icon) {
     color: var(--ion-color-danger)
 }
+.menu-header-content {
+    background-color: var(--ion-color-danger);
+    margin-top: constant(safe-area-inset-top);
+    margin-top: env(safe-area-inset-top);
+}
 
+.menu-avatar {
+    font-size: 100px;
+    margin: 0 auto;
+}
+
+.menu-text {
+    font-size: 14px;    
+}
+
+.menu-text:first-of-type {
+    padding-top: 5px
+}
+
+.menu-nav-icon {
+    font-size: 32px
+}
+
+.menu-nav-icon-1 {
+    font-size: 29px;
+    padding-left: 1px;
+}
+
+ion-content, ion-item{
+    --background: var(--ion-color-primary);
+}
+
+ion-item {
+    --min-height: 85px;
+    --border-color: var(--ion-color-dark)
+}
+
+.menu-thumbnail-wrapper {
+    width: 100px;
+}
+
+ion-thumbnail {
+    --border-radius: 50%;
+    --size: 85px;
+    margin: 0 auto;
+}
+
+ion-header.menu-header {
+    background-color: var(--ion-color-danger);
+}
+
+.spinner-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.15);
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.filled {
+    color: #E0061C;
+  }
 
 
